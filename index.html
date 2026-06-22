@@ -112,14 +112,30 @@ header.scrolled{box-shadow:0 2px 16px rgba(15,14,92,0.3)}
 .trust-badge h3{font-size:1rem;margin-bottom:4px;color:var(--azul-royal)}
 .trust-badge p{font-size:0.85rem;color:var(--cinza-texto);margin:0}
 
+/* Estilo da mini-grade de botões dos produtos */
+.product-buttons-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(110px, 1fr));
+  gap: 8px;
+  width: 100%;
+  margin-top: var(--spacing-md);
+}
+.product-buttons-grid .btn {
+  padding: 10px 6px;
+  font-size: 0.70rem;
+  min-height: 40px;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
 .products-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:var(--spacing-lg);margin-top:var(--spacing-xl)}
-.product-card{background:var(--branco);border-radius:var(--radius-card);overflow:hidden;box-shadow:var(--sombra-card);transition:transform 0.25s,box-shadow 0.25s}
+.product-card{background:var(--branco);border-radius:var(--radius-card);overflow:hidden;box-shadow:var(--sombra-card);transition:transform 0.25s,box-shadow 0.25s;display:flex;flex-direction:column}
 .product-card:hover{transform:translateY(-6px);box-shadow:0 16px 40px rgba(26,26,140,0.12)}
 .product-card-img{height:200px;background:linear-gradient(135deg,var(--azul-royal),var(--azul-marinho));display:flex;align-items:center;justify-content:center;position:relative}
 .product-card-img .icon-circle{width:64px;height:64px;background:var(--amarelo);border-radius:var(--radius-icon);display:flex;align-items:center;justify-content:center;font-size:1.5rem}
-.product-card-body{padding:var(--spacing-lg)}
+.product-card-body{padding:var(--spacing-lg);display:flex;flex-direction:column;flex-grow:1;justify-content:space-between}
 .product-card-body h3{margin-bottom:var(--spacing-xs);color:var(--azul-royal)}
-.product-card-body p{font-size:0.93rem;margin-bottom:var(--spacing-md)}
+.product-card-body p{font-size:0.93rem;margin-bottom:var(--spacing-md);flex-grow:1}
 
 .benefits-list{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:var(--spacing-md);margin-top:var(--spacing-xl)}
 .benefit-item{display:flex;align-items:flex-start;gap:var(--spacing-sm);padding:var(--spacing-md);border-radius:var(--radius-card);background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.08);transition:background 0.2s}
@@ -142,16 +158,6 @@ header.scrolled{box-shadow:0 2px 16px rgba(15,14,92,0.3)}
 .differential .diff-icon{width:44px;height:44px;min-width:44px;background:var(--azul-royal);color:var(--amarelo);border-radius:var(--radius-icon);display:flex;align-items:center;justify-content:center;font-weight:700;font-size:1rem}
 .differential h3{font-size:0.95rem;margin-bottom:4px;color:var(--azul-royal)}
 .differential p{font-size:0.85rem;margin:0;color:var(--cinza-texto)}
-
-.blog-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:var(--spacing-lg);margin-top:var(--spacing-xl)}
-.blog-card{border-radius:var(--radius-card);overflow:hidden;box-shadow:var(--sombra-card);background:var(--branco);transition:transform 0.25s}
-.blog-card:hover{transform:translateY(-4px)}
-.blog-card-img{height:160px;background:linear-gradient(135deg,var(--azul-royal),var(--azul-marinho));display:flex;align-items:center;justify-content:center;position:relative}
-.blog-card-img .tag{position:absolute;top:var(--spacing-sm);left:var(--spacing-sm);background:var(--amarelo);color:var(--azul-marinho);font-size:0.7rem;font-weight:700;text-transform:uppercase;padding:4px 12px;border-radius:var(--radius-pill);letter-spacing:0.5px}
-.blog-card-img .icon-sm{width:48px;height:48px;background:rgba(255,255,255,0.1);border-radius:var(--radius-icon);display:flex;align-items:center;justify-content:center;color:var(--amarelo);font-size:1.2rem}
-.blog-card-body{padding:var(--spacing-lg)}
-.blog-card-body h3{font-size:1rem;margin-bottom:var(--spacing-xs);color:var(--azul-royal)}
-.blog-card-body p{font-size:0.85rem;margin:0}
 
 .video-wrapper{max-width:800px;margin:var(--spacing-xl) auto 0;border-radius:var(--radius-card);overflow:hidden;box-shadow:0 16px 48px rgba(26,26,140,0.12)}
 .video-wrapper .ratio{position:relative;padding-bottom:56.25%;height:0;overflow:hidden;background:var(--azul-marinho)}
@@ -211,12 +217,11 @@ footer{background:var(--azul-marinho);color:rgba(255,255,255,0.7);padding:var(--
 .steps{grid-template-columns:1fr 1fr}
 .step::after{display:none}
 .differentials-list{grid-template-columns:1fr}
-.blog-grid{grid-template-columns:1fr}
-.footer-grid{grid-template-columns:1fr}
 .benefits-list{grid-template-columns:1fr}
 .btn{padding:14px 24px;font-size:0.85rem;width:100%;max-width:320px}
 .btn-group{flex-direction:column;align-items:stretch}
 .btn-group .btn-icon{width:100%;order:-1}
+.product-buttons-grid {grid-template-columns: 1fr 1fr;}
 }
 @media(max-width:480px){
 .steps{grid-template-columns:1fr}
@@ -257,7 +262,7 @@ footer{background:var(--azul-marinho);color:rgba(255,255,255,0.7);padding:var(--
 <div class="container">
 <div class="hero-content">
 <h1>Aqueça sua água com a força do sol. <span class="highlight">Economize</span> e sustente o futuro.</h1>
-<p>Soluções térmicas da UNISOL Energa Solar distribuídas com excelência pela Thermo WG. Tecnologia certificação, economia comprovada e compromisso com o meio ambiente.</p>
+<p>Soluções térmicas da UNISOL Energa Solar distribuídas com excelência pela Thermo WG. Tecnologia certificada, economia comprovada e compromisso com o meio ambiente.</p>
 <div class="btn-group">
 <button class="btn btn-icon" aria-label="Saiba mais sobre energia solar">☀</button>
 <a href="#contato" class="btn btn-primary">Solicite um orçamento</a>
@@ -338,7 +343,6 @@ footer{background:var(--azul-marinho);color:rgba(255,255,255,0.7);padding:var(--
 </div>
 </section>
 
-<!-- SEÇÃO DE PRODUTOS CORRETAMENTE POSICIONADA AQUI -->
 <section id="produtos" class="section" aria-labelledby="produtos-titulo">
 <div class="container">
 <div class="section-title fade-in">
@@ -346,66 +350,89 @@ footer{background:var(--azul-marinho);color:rgba(255,255,255,0.7);padding:var(--
 <p>Conheça os equipamentos que transformam a energia solar em economia para você</p>
 </div>
 <div class="products-grid">
+
 <div class="product-card fade-in">
 <div class="product-card-img" role="img" aria-label="Coletor Solar Plano">
 <img src="coletor_plano.jpg" alt="Coletor Solar Plano" style="width:100%;height:100%;object-fit:cover;">
 </div>
 <div class="product-card-body">
-<h3>Coletor Solar Plano</h3>
+<div>
+<h3>Coletor Solar Plano (Banho)</h3>
 <p>Ideal para aquecimento de água residencial e comercial. Alta absorção solar, durabilidade e eficiência energética comprovada. Perfeito para chuveiros, torneiras e duchas.</p>
-<a href="https://www.unisolaquecedores.com.br/_files/ugd/b5978d_7bc5d8ab474849f395dffc0c331a2de7.pdf" class="btn btn-primary" style="width:100%" target="_blank">Catálogo do Produto</a>
+</div>
+<div class="product-buttons-grid">
+<a href="Catalogo Coletor Linha Turbo.pdf" class="btn btn-primary" target="_blank">Linha Turbo</a>
+<a href="Catalogo Coletor Linha Uni.pdf" class="btn btn-primary" target="_blank">Linha Uni</a>
+<a href="Catalogo Coletor Linha Inox.pdf" class="btn btn-primary" target="_blank">Linha Inox</a>
 </div>
 </div>
+</div>
+
 <div class="product-card fade-in">
 <div class="product-card-img" role="img" aria-label="Reservatório Térmico">
 <img src="reservatorio_termico.png" alt="Reservatório Térmico" style="width:100%;height:100%;object-fit:cover;">
 </div>
 <div class="product-card-body">
+<div>
 <h3>Reservatório Térmico</h3>
 <p>Acumule a água aquecida com máxima eficiência. Disponível em diferentes capacidades, com isolamento térmico superior que mantém a água quente por mais tempo, mesmo durante a noite.</p>
-<a href="https://www.unisolaquecedores.com.br/_files/ugd/b5978d_72294330859c4468abc9550ad2cdc9e7.pdf" class="btn btn-primary" style="width:100%" target="_blank">Catálogo do Produto</a>
+</div>
+<div class="product-buttons-grid">
+<a href="RESERVATÓRIOS ATÉ 1.020 LITROS BAIXA E ALTA PRESSÃO.pdf" class="btn btn-primary" target="_blank">Até 1.020L</a>
+<a href="Catalogo Reservatorio Grande Porte.pdf" class="btn btn-primary" target="_blank">Até 6.000L</a>
 </div>
 </div>
+</div>
+
 <div class="product-card fade-in">
 <div class="product-card-img" role="img" aria-label="Coletor Solar a Vácuo">
 <img src="coletor_vacuo.jpg" alt="Coletor Solar a Vácuo" style="width:100%;height:100%;object-fit:cover;">
 </div>
 <div class="product-card-body">
-<h3>Coletor Solar a Vácuo</h3>
+<div>
+<h3>Aquecedor a Vácuo</h3>
 <p>Máxima eficiência mesmo em dias nublados e regiões mais frias. A tecnologia a vácuo minimiza as perdas de calor, garantindo alto desempenho em qualquer condição climática.</p>
-<a href="https://www.unisolaquecedores.com.br/_files/ugd/b5978d_bb2a478d183347a6a8798faa5720fb5e.pdf" class="btn btn-primary" style="width:100%" target="_blank">Catálogo do Produto</a>
+</div>
+<div class="product-buttons-grid">
+<a href="Catalago Coletor Solar a Vácuo.pdf" class="btn btn-primary" target="_blank">Coletor</a>
+<a href="Catalogo Acoplado a Vácuo.pdf" class="btn btn-primary" target="_blank">Acoplado</a>
 </div>
 </div>
+</div>
+
 <div class="product-card fade-in">
 <div class="product-card-img" role="img" aria-label="Ilustração de coletor solar para piscina">
 <div class="icon-circle">🏊</div>
 </div>
 <div class="product-card-body">
+<div>
 <h3>Coletor Solar para Piscina</h3>
 <p>Aqueça sua piscina de forma econômica e sustentável. Aproveite a energia solar para desfrutar da sua piscina o ano inteiro, sem gastar com gás ou eletricidade.</p>
-<a href="https://www.unisolaquecedores.com.br/_files/ugd/b5978d_f21f0e26181841c899b629b5fcabbe57.pdf" class="btn btn-primary" style="width:100%" target="_blank">Catálogo do Produto</a>
+</div>
+<div class="product-buttons-grid">
+<a href="Catalogo Aquecedor Solar para Piscina.pdf" class="btn btn-primary" style="grid-column: span 2;" target="_blank">Catálogo Piscina</a>
 </div>
 </div>
-<div class="product-card fade-in">
-<div class="product-card-img" role="img" aria-label="Acoplado a Vácuo">
-<img src="acoplado_vacuo.jpg" alt="Acoplado a Vácuo" style="width:100%;height:100%;object-fit:cover;">
 </div>
-<div class="product-card-body">
-<h3>Acoplado a Vácuo</h3>
-<p>Sistema que combina a eficiência do coletor a vácuo com a praticidade do acoplamento direto ao reservatório. Instalação simplificada e desempenho otimizado.</p>
-<a href="https://www.unisolaquecedores.com.br/_files/ugd/b5978d_bba25bd66bec416497357c087f08b313.pdf" class="btn btn-primary" style="width:100%" target="_blank">Catálogo do Produto</a>
-</div>
-</div>
+
 <div class="product-card fade-in">
 <div class="product-card-img" role="img" aria-label="Filtro Central">
 <img src="filtro_central.jpg" alt="Filtro Central" style="width:100%;height:100%;object-fit:cover;">
 </div>
 <div class="product-card-body">
+<div>
 <h3>Filtro Central</h3>
 <p>Garanta a qualidade e a limpeza da água do seu sistema de aquecimento solar. O filtro central protege os coletores e o reservatório, aumentando a vida útil do equipamento.</p>
-<a href="https://www.unisolaquecedores.com.br/_files/ugd/b5978d_f23e19049cd849cea930ed19edff8361.pdf" class="btn btn-primary" style="width:100%" target="_blank">Catálogo do Produto</a>
+</div>
+<div class="product-buttons-grid">
+<a href="Catálogo_filtros500.pdf" class="btn btn-primary" target="_blank">500 L/H</a>
+<a href="Catálogo_filtros500.pdf" class="btn btn-primary" target="_blank">1000 L/H</a>
+<a href="Catálogo_filtros500.pdf" class="btn btn-primary" target="_blank">3000 L/H</a>
+<a href="Catálogo_filtros500.pdf" class="btn btn-primary" target="_blank">5000 L/H</a>
 </div>
 </div>
+</div>
+
 </div>
 </div>
 </section>
@@ -685,7 +712,7 @@ window.handleSubmit=function(e){
 e.preventDefault();
 var form=e.target;
 var nome=form.querySelector('#nome').value;
-alert('Obrigado, '+nome+'! Recebemos sua solicitudade. Entraremos em contato em breve.');
+alert('Obrigado, '+nome+'! Recebemos sua solicitação. Entraremos em contato em breve.');
 form.reset();
 };
 })();
