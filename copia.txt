@@ -1,0 +1,87 @@
+Design System — Site de Energia Solar
+Baseado nas imagens (paleta azul/amarelo, fotos de painéis solares, botões pill, ícone de raio), aqui está a base do Design System com foco em gerar leads e conversão para orçamento (CTA "Faça um orçamento" é o elemento central).
+1. Cores
+Paleta Principal
+
+Azul Royal (fundo institucional, blocos de destaque): #1A1A8C / #1B1A8F
+Azul Marinho Escuro (variação de fundo, círculos): #0F0E5C
+
+Paleta Secundária (Ação/CTA)
+
+Amarelo-limão (botões, ícones, destaques de texto): #D6E04B / #D9E03E
+Esse amarelo é a cor de "ação" — deve ser usada quase exclusivamente em CTAs e ícones, nunca em grandes áreas de fundo (mantém o contraste e a hierarquia).
+
+Cores de Suporte
+
+Branco: #FFFFFF (textos sobre azul, fundos de seção)
+Cinza-claro (fundo neutro de seções alternadas): #F4F4F6
+Cinza-texto (textos secundários sobre fundo branco): #5C5C66
+Preto/Azul-escuro para textos sobre fundo claro: #1A1A8C (mesma cor da marca, reforça identidade mesmo no texto)
+
+Uso recomendado
+ElementoCorFundo de seção institucionalAzul RoyalFundo de seção alternadaBranco / Cinza-claroBotão primárioAmarelo-limão com texto azul-marinhoÍcones (raio)Amarelo sobre fundo azul, ou azul sobre fundo amarelo (circular)Texto de destaque (palavra-chave)Amarelo-limão sobre fundo azul
+2. Tipografia
+A fonte das imagens é uma geométrica sans-serif arredondada, peso bold nos títulos — semelhante a Poppins, Century Gothic ou Quicksand.
+Sugestões de fonte
+
+Títulos: Poppins (Bold/SemiBold) ou Gilroy
+Corpo de texto: Poppins (Regular) ou Inter (mais neutra para leitura longa)
+
+Hierarquia
+NívelTamanho (desktop)PesoUsoH148–56pxBold (700)Headline principal da hero sectionH232–40pxSemiBold (600)Títulos de seçãoH324–28pxSemiBold (600)Subtítulos de cards/blocosCorpo (body)16–18pxRegular (400)Parágrafos, descriçõesSmall/Legenda13–14pxRegular (400)Rodapé, contato, textos legaisBotão/CTA14–16pxBold (700), uppercase, letter-spacing leveTexto dos botões
+Line-height recomendado: 1.2 para títulos, 1.5–1.6 para corpo de texto.
+3. Componentes
+Botões
+
+Formato: pill (border-radius total — border-radius: 999px ou 50px)
+Cor primária: fundo amarelo-limão, texto azul-marinho escuro, bold
+Botão secundário (ícone): círculo branco com seta diagonal (↗), sempre emparelhado à esquerda do botão de texto
+Estado hover: leve escurecimento do amarelo (~10%) ou leve scale-up (1.03)
+Padding sugerido: 14px vertical x 28px horizontal
+
+Inputs de formulário (não aparecem nas imagens, mas seguindo a linguagem visual)
+
+Border-radius: 12px (moderado, não pill — para diferenciar de botões)
+Fundo branco, borda 1px cinza-claro (#E0E0E5)
+Foco: borda azul royal + leve sombra azul (glow sutil)
+Label acima do campo, em cinza-texto, 13px
+
+Cards
+
+Fundo branco ou azul royal (dependendo da seção)
+Border-radius: 16–24px (cantos bem arredondados, como visto nos blocos de imagem/texto)
+Sombra leve para cards sobre fundo claro (ver seção 4)
+Ícone circular (raio) posicionado no canto ou sobreposto à borda do card, como elemento de assinatura visual
+
+4. Estética Geral
+Border-radius
+
+Botões: total (pill)
+Cards/blocos de conteúdo: 16–24px
+Imagens dentro de cards: 16px
+Ícones circulares: 50% (círculo perfeito)
+Inputs: 12px
+
+Sombras
+
+Cards sobre fundo claro: box-shadow: 0 8px 24px rgba(26,26,140,0.08) (sombra azulada bem suave, nunca preta pura)
+Botões: sombra sutil no hover 0 4px 12px rgba(214,224,75,0.4) (sombra na cor do próprio botão, reforça o glow)
+Evitar sombras pesadas — a identidade é clean/corporativa
+
+Espaçamentos
+
+Grid base: 8px (todos os espaçamentos múltiplos de 8)
+Padding de seção (desktop): 80–100px vertical, 64px horizontal
+Gap entre título e texto: 16–24px
+Gap entre texto e CTA: 32px
+Margem entre blocos/cards: 24–40px
+
+Princípios de usabilidade para conversão (objetivo: gerar orçamentos)
+
+CTA sempre visível e repetido: cada seção/bloco precisa ter seu próprio "Faça um orçamento" — não depender só do header.
+Contraste alto entre CTA (amarelo) e fundo (azul ou branco) — garante que o botão "salte aos olhos".
+Textos curtos e diretos no H1/H2 (ex: "Diga adeus à conta de luz alta") — foco em benefício, não em característica técnica.
+Hierarquia visual clara: cada seção = 1 imagem + 1 título + 1 parágrafo curto + 1 CTA. Não sobrecarregar com texto.
+Ícone do raio como elemento de marca recorrente — pode ser usado como "bullet" visual, divisor de seção ou marcador de destaque, reforçando reconhecimento da marca em todo o scroll.
+
+Se quiser, posso transformar isso em um documento Word formatado ou num guia visual em HTML/Figma-style para facilitar a consulta da equipe.
